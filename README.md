@@ -9,3 +9,6 @@ Part 2:
 Write a script to deploy your health check. It can be deployed as a serverless function, as something that runs directly on a virtual machine, or as any other service with which you feel comfortable (which you feel can showcase a basic knowledge and experience of deployment processes). Since we don't have a test AWS account for you, please use pseudo-code. We don't expect the script to work perfectly as written. You can assume VPCs, Security Groups, Access Keys, Jenkins, etc. are all set up and you have access to them.
 
 Requirements are: send an exit code 0 if successful, 1 if warning, and 2 if error. status 400 responses are considered warnings status 500 responses are considered errors. The script should execute every 5 minutes.
+
+NOTES:
+HealthCheckPipeline.yml was written in an Azure DevOps context as I did not have experience with AWS or Github Action deployments at the time
