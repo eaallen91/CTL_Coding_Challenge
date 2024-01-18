@@ -1,0 +1,18 @@
+pr: none
+trigger: none
+schedules:
+  - cron: "*/5 * * * *"
+    displayName: 'HealthCheck'
+    branches:
+      include:
+        - master
+    always: true
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: PythonScript@0
+    inputs:
+      scriptSource: 'filePath'
+      scriptPath: 'HealthCheckMonitor.py'
